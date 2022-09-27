@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./Style/style.css">
+</head>
+<body>
+    <div class="container">
+        <script>
+            var x = 6, y = 14, z = 4;
+            document.write(x += y - x++ * z);
+            /* 1. выполняется постфиксный инкремент (на данном  этапе остается 6);
+               2. умножение на z (6*4=24);
+               3. опетатор вычитания (14-24=-10);
+               4. условный оператор (6-10=-4) */
+        </script>
+    <br>
+        <script>
+            var x = 6, y = 14, z = 4;
+            document.write(z = --x - y * x);
+            /* 1. префиксный декремент (6-1=5);
+               2. умножение (14*5=70);
+               3. вычитание (5-70=65) */
+        </script>
+    <br>
+        <script>
+            var x = 6, y = 14, z = 4;
+            document.write(y /= x + 5 % z);
+            /* 1. остаток от деления (5%4=1);
+               2. сложение (6+1=7);
+               3. условный оператор (14/7=2) */
+        </script>
+    <br>
+        <script>
+            var x = 6, y = 14, z = 4;
+            document.write(z - x++ + y * 5);
+            /* 1. постфиксный инкремент (остается 6);
+               2. умножение (14*5=70);
+               3. вычитание, сложение (4-6+70=68) */
+        </script>
+    <br>
+        <script>
+            var x = 6, y = 14, z = 4;
+            document.write(x = y - x++ * z);
+            /* 1. постфиксный инкремент (остается 6);
+               2. умножение (6*4=24);
+               3. вычитание (14-24=-10) */
+        </script>
+    </div>
+</body>
+</html>
